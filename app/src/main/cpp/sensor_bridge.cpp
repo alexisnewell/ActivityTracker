@@ -10,7 +10,7 @@
 #define LOGI(...) __android_log_print(ANDROID_LOG_INFO,  LOG_TAG, __VA_ARGS__)
 #define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, LOG_TAG, __VA_ARGS__)
 
-// ─── Sensor infrastructure ───────────────────────────────────────────────────
+// Sensor infrastructure
 
 static ASensorManager*    sSensorManager = nullptr;
 static ASensorEventQueue* sEventQueue    = nullptr;
@@ -19,7 +19,7 @@ static ALooper*           sLooper        = nullptr;
 static const ASensor* sAccelerometer = nullptr;
 static const ASensor* sGyroscope     = nullptr;
 
-// ─── C++ engine instances ─────────────────────────────────────────────────────
+// C++ engine instances
 
 static OrientationFilter sOrientation;
 static StepDetector      sDetector;
@@ -30,7 +30,7 @@ static float   gRoll           = 0.0f;
 static int     gCarryMode      = 0;
 static int64_t gLastTimestampNs = 0;
 
-// ─── Sensor event handler ────────────────────────────────────────────────────
+// Sensor event handler
 
 static int sensorCallback(int fd, int events, void* data) {
     ASensorEvent event;
@@ -62,7 +62,7 @@ static int sensorCallback(int fd, int events, void* data) {
     return 1;
 }
 
-// ─── JNI exported functions ───────────────────────────────────────────────────
+// JNI exported functions
 
 extern "C" {
 

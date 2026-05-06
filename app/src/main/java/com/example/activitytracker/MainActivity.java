@@ -17,10 +17,10 @@ import android.widget.TextView;
  */
 public class MainActivity extends AppCompatActivity {
 
-    // ── Load native library ───────────────────────────────────────────────────
+    //Load native library
     static { System.loadLibrary("activitytracker"); }
 
-    // ── JNI declarations (implemented in sensor_bridge.cpp) ──────────────────
+    //JNI declarations (implemented in sensor_bridge.cpp)
     private native boolean nativeInit();
     private native void    nativeShutdown();
     private native int     nativeGetSteps();
@@ -29,11 +29,11 @@ public class MainActivity extends AppCompatActivity {
     private native float   nativeGetRoll();
     private native int     nativeGetCarryMode();   // 0=HAND 1=POCKET 2=BAG 3=UNKNOWN
 
-    // ── UI refs ───────────────────────────────────────────────────────────────
+    // UI refs
     private TextView tvSteps, tvPitch, tvRoll, tvCarry;
     private Button   btnReset;
 
-    // ── Poll loop ─────────────────────────────────────────────────────────────
+    // Poll loop
     private final Handler   uiHandler   = new Handler(Looper.getMainLooper());
     private static final int POLL_MS    = 200;
 
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    // ── Lifecycle ─────────────────────────────────────────────────────────────
+    // Lifecycle
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         nativeShutdown();
     }
 
-    // ── UI update ─────────────────────────────────────────────────────────────
+    // UI update
 
     private static final String[] CARRY_LABELS = { "Hand 🖐", "Pocket 👖", "Bag 🎒", "Unknown ❓" };
 

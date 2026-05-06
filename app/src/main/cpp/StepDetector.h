@@ -3,11 +3,11 @@
 #include <cstdint>
 #include <functional>
 
-// ─────────────────────────────────────────────
+
 //  OrientationFilter
 //  Complementary filter fusing accel + gyro.
 //  Gives stable pitch/roll even with sensor noise.
-// ─────────────────────────────────────────────
+
 class OrientationFilter {
 public:
     float pitch = 0.0f;  // forward/back tilt  (degrees)
@@ -44,11 +44,11 @@ private:
 };
 
 
-// ─────────────────────────────────────────────
+
 //  StepDetector
 //  Peak-detection pedometer on raw accelerometer.
 //  Adapts threshold based on carry mode.
-// ─────────────────────────────────────────────
+
 class StepDetector {
 public:
     using StepCallback = std::function<void(int totalSteps)>;
