@@ -7,6 +7,10 @@ import android.os.Looper;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import android.content.Intent;
+
+
 /**
  * MainActivity
  *
@@ -63,6 +67,24 @@ public class MainActivity extends AppCompatActivity {
         if (!ok) {
             tvSteps.setText("Sensor init failed!");
         }
+
+        BottomNavigationView bottomNav = findViewById(R.id.bottomNav);
+
+// Highlight current tab
+        bottomNav.setSelectedItemId(R.id.nav_steps);
+
+        bottomNav.setOnItemSelectedListener(item -> {
+            if (item.getItemId() == R.id.nav_steps) {
+                return true;
+            } else if (item.getItemId() == R.id.nav_workouts) {
+                startActivity(new Intent(MainActivity.this, com.example.activitytracker.workouts.WorkoutActivity.class));
+                overridePendingTransition(0, 0);
+                return true;
+            }
+            return false;
+        });
+
+
     }
 
     @Override

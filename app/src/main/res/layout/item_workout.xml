@@ -1,0 +1,28 @@
+<!-- res/layout/item_workout.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:layout_marginBottom="8dp">
+
+    <!-- Exercise Name -->
+    <TextView
+        android:id="@+id/exerciseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bench Press"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <!-- Details -->
+    <TextView
+        android:id="@+id/exerciseDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sets: 3 | Reps: 10 | Weight: 135 lbs"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp"/>
+
+</LinearLayout>
