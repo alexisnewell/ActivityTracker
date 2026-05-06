@@ -8,7 +8,8 @@ The 3 C++ files
 StepDetector.h — pure, portable C++, no Android dependencies:
 
 OrientationFilter uses a complementary filter using gyro + accel to get stable pitch and roll without drift
-StepDetector runs peak detection on the accelerometer magnitude with a low-pass smoother to kill jitter. Crucially, it adjusts its sensitivity threshold based on carry mode — pocket walking needs a higher threshold than hand-held
+StepDetector runs peak detection on the accelerometer magnitude with a low-pass smoother. 
+adjusts its sensitivity threshold based on carry mode — pocket walking needs a higher threshold than hand-held
 
 sensor_bridge.cpp — the Android glue:
 
