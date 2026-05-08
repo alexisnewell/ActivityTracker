@@ -21,6 +21,7 @@ CMakeLists.txt — links against android and log system libraries, enables -ffas
 
 workouts
 - add, edit, delete
+
 Workout.java - store Exercise Name, Reps, Sets, Weight
 WorkoutActivity.java - provides a structured interface for logging weight-training exercises, 
 including sets, repetitions, and load. 
