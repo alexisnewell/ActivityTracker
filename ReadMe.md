@@ -1,6 +1,4 @@
-<img width="463" height="761" alt="Screenshot 2026-05-08 at 3 36 54 PM" src="https://github.com/user-attachments/assets/019bf54e-8459-4421-873a-1c16b164aac4" />
-<img width="385" height="773" alt="Screenshot 2026-05-08 at 3 37 22 PM" src="https://github.com/user-attachments/assets/3d356b82-da9d-4d91-8d8a-0b72c1666ed7" />
-<img width="388" height="763" alt="Screenshot 2026-05-08 at 3 37 38 PM" src="https://github.com/user-attachments/assets/57b2c71d-346b-422d-86e2-3decc4ce8f57" />
+<img width="463" height="761" alt="Screenshot 2026-05-08 at 3 36 54 PM" src="https://github.com/user-attachments/assets/019bf54e-8459-4421-873a-1c16b164aac4" /><img width="385" height="773" alt="Screenshot 2026-05-08 at 3 37 22 PM" src="https://github.com/user-attachments/assets/3d356b82-da9d-4d91-8d8a-0b72c1666ed7" /><img width="388" height="763" alt="Screenshot 2026-05-08 at 3 37 38 PM" src="https://github.com/user-attachments/assets/57b2c71d-346b-422d-86e2-3decc4ce8f57" />
 Project Architecture
 Java (UI layer)
     ↕  JNI calls every 200ms
