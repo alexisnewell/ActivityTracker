@@ -1,8 +1,8 @@
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/019bf54e-8459-4421-873a-1c16b164aac4" width="250"/>
-  <img src="https://github.com/user-attachments/assets/3d356b82-da9d-4d91-8d8a-0b72c1666ed7" width="250"/>
-  <img src="https://github.com/user-attachments/assets/57b2c71d-346b-422d-86e2-3decc4ce8f57" width="250"/>
+  <img src="https://github.com/user-attachments/assets/019bf54e-8459-4421-873a-1c16b164aac4" height="500"/>
+  <img src="https://github.com/user-attachments/assets/3d356b82-da9d-4d91-8d8a-0b72c1666ed7" height="500"/>
+  <img src="https://github.com/user-attachments/assets/57b2c71d-346b-422d-86e2-3decc4ce8f57" height="500"/>
 </p>
 Project Architecture
 Java (UI layer)
