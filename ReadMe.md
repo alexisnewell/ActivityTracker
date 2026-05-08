@@ -5,10 +5,9 @@
   <img src="https://github.com/user-attachments/assets/57b2c71d-346b-422d-86e2-3decc4ce8f57" height="500"/>
 </p>
 Project Architecture
-Java (UI layer)
-    ↕  JNI calls every 200ms
-C++ sensor_bridge.cpp  ←  ASensorManager events (50 Hz)
-    ↓
+Java (UI layer), 
+JNI calls every 200ms
+C++ sensor_bridge.cpp,  ASensorManager events (50 Hz) 
 StepDetector.h  +  OrientationFilter
 The 3 C++ files
 StepDetector.h — pure, portable C++, no Android dependencies:
