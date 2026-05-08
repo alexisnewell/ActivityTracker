@@ -11,6 +11,12 @@ OrientationFilter uses a complementary filter using gyro + accel to get stable p
 StepDetector runs peak detection on the accelerometer magnitude with a low-pass smoother. 
 adjusts its sensitivity threshold based on carry mode — pocket walking needs a higher threshold than hand-held
 
+The accelerometer measures acceleration forces 
+(linear movement) along three axes (X, Y, and Z), 
+detecting how fast the phone is speeding up, slowing down, or its tilt.
+
+The gyroscope measures angular velocity—how fast the phone is rotating or twisting around the three axes
+
 sensor_bridge.cpp — the Android glue:
 
 Uses ASensorManager + ALooper to receive sensor events on a background thread at ~50 Hz
