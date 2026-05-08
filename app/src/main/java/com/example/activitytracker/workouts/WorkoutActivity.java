@@ -50,7 +50,7 @@ public class WorkoutActivity extends AppCompatActivity {
         // RecyclerView setup
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new WorkoutAdapter(workoutList);
+        adapter = new WorkoutAdapter(workoutList, this);
         recyclerView.setAdapter(adapter);
 
         // Inputs

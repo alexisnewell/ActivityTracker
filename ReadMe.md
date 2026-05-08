@@ -20,6 +20,7 @@ Atomic global state (gStepCount, gPitch, etc.) is written by C++ and read by Jav
 CMakeLists.txt — links against android and log system libraries, enables -ffast-math for a free speed boost on sensor math
 
 workouts
+- add, edit, delete
 Workout.java - store Exercise Name, Reps, Sets, Weight
 WorkoutActivity.java - provides a structured interface for logging weight-training exercises, 
 including sets, repetitions, and load. 
@@ -28,7 +29,7 @@ allowing users to switch between features without losing progress.
 WorkoutAdapter.java - acts as a bridge between the workout data model and the RecyclerView UI, 
 binding each workout entry (exercise, sets, reps, weight) to a visual list item for efficient and dynamic rendering.
 Project Features
-1. Tracks step count using sensors in phone
+1. Tracks step count using sensors in the phone
 2. Track Workouts on a separate interface
 
 Switch Between Features using bottom navigation ensuring no data is lost when you switch between

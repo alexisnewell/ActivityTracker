@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="editName" type="id" />
+    <item name="editSets" type="id" />
+    <item name="editReps" type="id" />
+    <item name="editWeight" type="id" />
+</resources>
