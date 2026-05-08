@@ -10,7 +10,7 @@ JNI calls every 200ms
 C++ sensor_bridge.cpp,  ASensorManager events (50 Hz) 
 StepDetector.h  +  OrientationFilter
 The 3 C++ files
-StepDetector.h — pure, portable C++, no Android dependencies:
+StepDetector.h:
 
 OrientationFilter uses a complementary filter using gyro + accel to get stable pitch and roll without drift
 StepDetector runs peak detection on the accelerometer magnitude with a low-pass smoother. 
@@ -22,7 +22,7 @@ detecting how fast the phone is speeding up, slowing down, or its tilt.
 
 The gyroscope measures angular velocity—how fast the phone is rotating or twisting around the three axes
 
-sensor_bridge.cpp — the Android glue:
+sensor_bridge.cpp:
 
 Uses ASensorManager + ALooper to receive sensor events on a background thread at ~50 Hz
 Exports JNI functions (nativeInit, nativeGetSteps, etc.) that Java calls
