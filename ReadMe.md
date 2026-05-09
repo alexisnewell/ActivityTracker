@@ -10,8 +10,8 @@ JNI calls every 200ms
 C++ sensor_bridge.cpp,  ASensorManager events (50 Hz) 
 StepDetector.h  +  OrientationFilter
 The 3 C++ files
-StepDetector.h:
 
+StepDetector.h:
 OrientationFilter uses a complementary filter using gyro + accel to get stable pitch and roll without drift
 StepDetector runs peak detection on the accelerometer magnitude with a low-pass smoother. 
 adjusts its sensitivity threshold based on carry mode — pocket walking needs a higher threshold than hand-held
