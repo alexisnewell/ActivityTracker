@@ -5,10 +5,19 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.activitytracker.analytics.StepHistoryActivity;
+import com.example.activitytracker.data.AppDatabase;
+import com.example.activitytracker.data.DailyStepsEntity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import android.content.Intent;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.concurrent.Executors;
 
 
 /**
@@ -83,6 +92,11 @@ public class MainActivity extends AppCompatActivity {
             }
             return false;
         });
+        ImageButton historyButton = findViewById(R.id.historyButton);
+        historyButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, StepHistoryActivity.class);
+            startActivity(intent);
+        });
 
 
     }
@@ -97,6 +111,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         uiHandler.removeCallbacks(pollRunnable);
+        Executors.newSingleThreadExecutor().execute(() -> {
+            String today = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+                    .format(new Date());
+            DailyStepsEntity entity = new DailyStepsEntity();
+            entity.date = today;
+            entity.steps = nativeGetSteps();
+            AppDatabase.getInstance(getApplicationContext())
+                    .dailyStepsDao()
+                    .insert(entity);
+        });
     }
 
     @Override

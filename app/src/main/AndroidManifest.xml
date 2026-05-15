@@ -2,23 +2,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.activitytracker">
 
-    <!--
-        BODY_SENSORS lets us read accelerometer/gyroscope.
-        ACTIVITY_RECOGNITION is required on Android 10+ for step-counter hardware sensor.
-    -->
+    <!-- Permissions -->
     <uses-permission android:name="android.permission.BODY_SENSORS"/>
     <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION"/>
 
-    <!-- Declare that we USE an accelerometer (not required but good practice) -->
+    <!-- Hardware features -->
     <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true"/>
-    <uses-feature android:name="android.hardware.sensor.gyroscope"     android:required="false"/>
+    <uses-feature android:name="android.hardware.sensor.gyroscope" android:required="false"/>
 
     <application
         android:label="Activity Tracker"
         android:theme="@style/Theme.ActivityTracker">
 
+        <!-- MAIN ACTIVITY -->
         <activity
-            android:name="com.example.activitytracker.MainActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -26,7 +24,17 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".workouts.WorkoutActivity" />
+        <!-- STEP HISTORY (THIS WAS MISSING → VERY LIKELY YOUR CRASH) -->
+        <activity
+            android:name=".analytics.StepHistoryActivity"
+            android:exported="false" />
+
+        <!-- WORKOUT -->
+        <activity
+            android:name=".workouts.WorkoutActivity"
+            android:exported="false" />
+        
 
     </application>
+
 </manifest>
