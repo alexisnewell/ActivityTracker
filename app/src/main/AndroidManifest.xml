@@ -11,12 +11,14 @@
     <uses-feature android:name="android.hardware.sensor.gyroscope" android:required="false"/>
 
     <application
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:label="Activity Tracker"
         android:theme="@style/Theme.ActivityTracker">
 
-        <!-- MAIN ACTIVITY -->
+        <!-- HOME ACTIVITY (launcher) -->
         <activity
-            android:name=".MainActivity"
+            android:name=".HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -24,7 +26,12 @@
             </intent-filter>
         </activity>
 
-        <!-- STEP HISTORY (THIS WAS MISSING → VERY LIKELY YOUR CRASH) -->
+        <!-- MAIN ACTIVITY (steps) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <!-- STEP HISTORY -->
         <activity
             android:name=".analytics.StepHistoryActivity"
             android:exported="false" />
@@ -33,7 +40,7 @@
         <activity
             android:name=".workouts.WorkoutActivity"
             android:exported="false" />
-        
+
 
     </application>
 

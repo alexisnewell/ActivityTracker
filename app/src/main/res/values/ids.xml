@@ -4,4 +4,5 @@
     <item name="editSets" type="id" />
     <item name="editReps" type="id" />
     <item name="editWeight" type="id" />
+    <item name="nav_home" type="id" />
 </resources>

@@ -79,11 +79,15 @@ public class MainActivity extends AppCompatActivity {
 
         BottomNavigationView bottomNav = findViewById(R.id.bottomNav);
 
-// Highlight current tab
+        // Highlight current tab
         bottomNav.setSelectedItemId(R.id.nav_steps);
 
         bottomNav.setOnItemSelectedListener(item -> {
-            if (item.getItemId() == R.id.nav_steps) {
+            if (item.getItemId() == R.id.nav_home) {
+                startActivity(new Intent(MainActivity.this, com.example.activitytracker.HomeActivity.class));
+                overridePendingTransition(0, 0);
+                return true;
+            } else if (item.getItemId() == R.id.nav_steps) {
                 return true;
             } else if (item.getItemId() == R.id.nav_workouts) {
                 startActivity(new Intent(MainActivity.this, com.example.activitytracker.workouts.WorkoutActivity.class));

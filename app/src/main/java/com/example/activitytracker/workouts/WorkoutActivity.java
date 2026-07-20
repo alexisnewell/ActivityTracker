@@ -87,11 +87,15 @@ public class WorkoutActivity extends AppCompatActivity {
 
         BottomNavigationView bottomNav = findViewById(R.id.bottomNav);
 
-// Highlight current tab
+        // Highlight current tab
         bottomNav.setSelectedItemId(R.id.nav_workouts);
 
         bottomNav.setOnItemSelectedListener(item -> {
-            if (item.getItemId() == R.id.nav_steps) {
+            if (item.getItemId() == R.id.nav_home) {
+                startActivity(new Intent(WorkoutActivity.this, com.example.activitytracker.HomeActivity.class));
+                overridePendingTransition(0, 0);
+                return true;
+            } else if (item.getItemId() == R.id.nav_steps) {
                 startActivity(new Intent(WorkoutActivity.this, com.example.activitytracker.MainActivity.class));
                 overridePendingTransition(0, 0);
                 return true;
