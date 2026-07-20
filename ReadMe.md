@@ -1,12 +1,12 @@
 <p align="center">
 <img width="210" height="460" alt="Screenshot 2026-07-19 at 9 05 39 PM" src="https://github.com/user-attachments/assets/c3c30fed-bda5-4802-bc31-0ebdc378a616" />
-  height="500"/>
+
 <img width="209" height="461" alt="Screenshot 2026-07-19 at 9 05 24 PM" src="https://github.com/user-attachments/assets/7ebbe851-f262-4b10-8623-577bb4d835ac" />
-  height="500"/>
+
 <img width="215" height="468" alt="Screenshot 2026-07-19 at 9 05 05 PM" src="https://github.com/user-attachments/assets/d5b48555-ea3c-414d-9d85-d1aa7c985955" />
-  height="500"/>
+
 <img width="223" height="468" alt="Screenshot 2026-07-19 at 9 04 53 PM" src="https://github.com/user-attachments/assets/8f250ca6-12a9-400a-b03b-7618422d93ac" />
-  height="500"/>
+
 </p>
 Project Architecture
 Java (UI layer), 
