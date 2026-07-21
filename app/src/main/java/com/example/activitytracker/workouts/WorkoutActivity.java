@@ -140,6 +140,8 @@ public class WorkoutActivity extends AppCompatActivity {
             }
         });
 
+
+
         BottomNavigationView bottomNav = findViewById(R.id.bottomNav);
 
         // Highlight current tab
