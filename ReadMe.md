@@ -1,9 +1,21 @@
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/019bf54e-8459-4421-873a-1c16b164aac4" height="500"/>
-  <img src="https://github.com/user-attachments/assets/3d356b82-da9d-4d91-8d8a-0b72c1666ed7" height="500"/>
-  <img src="https://github.com/user-attachments/assets/57b2c71d-346b-422d-86e2-3decc4ce8f57" height="500"/>
-</p>
+<table align="center">
+  <tr>
+    <td>
+      <img width="250" height="500" alt="Screenshot 2026-07-19 at 9 04 53 PM" src="https://github.com/user-attachments/assets/8f250ca6-12a9-400a-b03b-7618422d93ac" />
+    </td>
+    <td>
+      <img width="250" height="500" alt="Screenshot 2026-07-19 at 9 05 39 PM" src="https://github.com/user-attachments/assets/c3c30fed-bda5-4802-bc31-0ebdc378a616" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img width="250" height="500" alt="Screenshot 2026-07-19 at 9 05 05 PM" src="https://github.com/user-attachments/assets/d5b48555-ea3c-414d-9d85-d1aa7c985955" />
+    </td>
+    <td>
+      <img width="250" height="500" alt="Screenshot 2026-07-19 at 9 05 24 PM" src="https://github.com/user-attachments/assets/7ebbe851-f262-4b10-8623-577bb4d835ac" />
+    </td>
+  </tr>
+</table>
 Project Architecture
 Java (UI layer), 
 JNI calls every 200ms
