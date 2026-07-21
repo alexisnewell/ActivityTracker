@@ -5,9 +5,11 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -89,12 +91,32 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutV
                     .setView(dialogView)
                     .setPositiveButton("Save", (dialog, which) -> {
 
+                        if (setsInput.getText().toString().isEmpty()
+                                || repsInput.getText().toString().isEmpty()
+                                || weightInput.getText().toString().isEmpty()) {
+
+                            Toast.makeText(context,
+                                    "Please fill in all fields",
+                                    Toast.LENGTH_SHORT).show();
+
+                            return;
+                        }
+
                         workout.setExerciseName(nameInput.getText().toString());
                         workout.setSets(Integer.parseInt(setsInput.getText().toString()));
                         workout.setReps(Integer.parseInt(repsInput.getText().toString()));
                         workout.setWeight(Float.parseFloat(weightInput.getText().toString()));
 
                         notifyItemChanged(position);
+                        InputMethodManager imm =
+                                (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+
+                        if (imm != null) {
+                            imm.hideSoftInputFromWindow(
+                                    nameInput.getWindowToken(),
+                                    0
+                            );
+                        }
                     })
                     .setNegativeButton("Cancel", null)
                     .show();
