@@ -50,11 +50,24 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutV
 
         // DELETE
         holder.deleteButton.setOnClickListener(v -> {
-            workoutList.remove(position);
-            notifyItemRemoved(position);
-            notifyItemRangeChanged(position, workoutList.size());
-        });
 
+            new AlertDialog.Builder(context)
+                    .setTitle("Delete Workout")
+                    .setMessage("Are you sure you want to delete this workout?")
+                    .setNegativeButton("Cancel", null)
+                    .setPositiveButton("Delete", (dialog, which) -> {
+
+                        workoutList.remove(position);
+                        notifyItemRemoved(position);
+
+                        if (context instanceof WorkoutActivity) {
+                            ((WorkoutActivity) context).updateEmptyState();
+                        }
+
+                    })
+                    .show();
+
+        });
         // EDIT
         holder.editButton.setOnClickListener(v -> {
 

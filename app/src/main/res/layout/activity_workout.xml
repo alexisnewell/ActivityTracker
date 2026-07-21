@@ -60,6 +60,17 @@
         android:text="Add Workout"
         android:layout_marginBottom="16dp"/>
 
+    <TextView
+        android:id="@+id/emptyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No workouts yet.\nTap Add Workout to get started!"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textColor="#888888"
+        android:padding="24dp"
+        android:visibility="gone"/>
+
     <!-- RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

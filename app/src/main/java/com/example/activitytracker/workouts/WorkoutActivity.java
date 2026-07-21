@@ -1,27 +1,24 @@
 package com.example.activitytracker.workouts;
-
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.activitytracker.R;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.widget.Toast;
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
+import android.widget.TextView;
+import android.content.Context;
 
 public class WorkoutActivity extends AppCompatActivity {
 
@@ -30,6 +27,30 @@ public class WorkoutActivity extends AppCompatActivity {
 
     private EditText inputName, inputSets, inputReps, inputWeight;
     private Button addButton;
+    private TextView emptyText;
+
+    public void updateEmptyState() {
+
+        if (workoutList.isEmpty()) {
+            emptyText.setVisibility(View.VISIBLE);
+        } else {
+            emptyText.setVisibility(View.GONE);
+        }
+
+    }
+
+    private void hideKeyboard() {
+        View view = getCurrentFocus();
+
+        if (view != null) {
+            InputMethodManager imm =
+                    (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+
+            if (imm != null) {
+                imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+            }
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +75,9 @@ public class WorkoutActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new WorkoutAdapter(workoutList, this);
         recyclerView.setAdapter(adapter);
+
+        emptyText = findViewById(R.id.emptyText);
+        updateEmptyState();
 
         // Inputs
         inputName = findViewById(R.id.inputName);
@@ -124,6 +148,14 @@ public class WorkoutActivity extends AppCompatActivity {
                 workoutList.add(workout);
 
                 adapter.notifyItemInserted(workoutList.size() - 1);
+                updateEmptyState();
+                hideKeyboard();
+
+                Toast.makeText(
+                        WorkoutActivity.this,
+                        "Workout added!",
+                        Toast.LENGTH_SHORT
+                ).show();
 
                 // Clear fields
                 inputName.setText("");
