@@ -2,6 +2,8 @@
     <string name="app_name">ActivityTracker</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
+    <string name="workout_details">Sets: %1$d | Reps: %2$d | Weight: %3$d lbs</string>
+
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
