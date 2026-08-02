@@ -6,8 +6,6 @@
     <td>
       <img width="250" height="500" alt="Screenshot 2026-07-19 at 9 05 39 PM" src="https://github.com/user-attachments/assets/c3c30fed-bda5-4802-bc31-0ebdc378a616" />
     </td>
-  </tr>
-  <tr>
     <td>
       <img width="250" height="500" alt="Screenshot 2026-07-19 at 9 05 05 PM" src="https://github.com/user-attachments/assets/d5b48555-ea3c-414d-9d85-d1aa7c985955" />
     </td>
